@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
@@ -31,9 +32,30 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
                 bp.purchase(MainActivity.this, "android.test.purchased");
+            }
+        });
+
+        Button button_p = (Button) findViewById(R.id.button_purchased);
+        button_p.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                bp.purchase(MainActivity.this, "android.test.purchased");
+            }
+        });
+
+        Button button_c = (Button) findViewById(R.id.button_canceled);
+        button_c.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                bp.purchase(MainActivity.this, "android.test.canceled");
+            }
+        });
+
+        Button button_u = (Button) findViewById(R.id.button_unavaliable);
+        button_u.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                bp.purchase(MainActivity.this, "android.test.item_unavailable");
             }
         });
 

@@ -25,22 +25,22 @@
         tools:layout_editor_absoluteY="8dp">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_purchased"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="android.test.purchased" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_canceled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="android.test.canceled" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_unavaliable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="android.test.item_unavailable" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
