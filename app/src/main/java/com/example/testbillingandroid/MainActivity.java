@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onProductPurchased(@NonNull String productId, @Nullable TransactionDetails details) {
-        Toast.makeText(this, "You've purchased something!", Toast.LENGTH_LONG);
+        Toast.makeText(this, "You've purchased something!", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onBillingError(int errorCode, @Nullable Throwable error) {
-
+        Toast.makeText(this, "Somthing were wrong!", Toast.LENGTH_LONG).show();
     }
 
     @Override
